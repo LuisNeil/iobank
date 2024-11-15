@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+
+  db:
+    image: postgres:latest
+    container_name: bank_db
+    restart: always
+    environment:
+      - POSTGRES_DB=bank_db
+      - POSTGRES_USER=luisneil
+      - POSTGRES_PASSWORD=luisneil
+    ports:
+      - "5432:5432"
